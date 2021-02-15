@@ -1,0 +1,99 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    & .app-header {
+        position: fixed;
+        flex-direction: row;
+        height: 55px;
+        width: 100%;
+        z-index: 1020;
+    }
+    & .app-header {
+        flex: 0 0 55px;
+    }
+    & .app-body {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        margin-top: 55px;
+    }
+    & .app-sidebar {
+        top: 0;
+        position: fixed;
+        z-index: 1020;
+        margin-left: -200px;
+        height: 100vh;
+    }
+    & .app-main {
+        flex: 1 1;
+    }
+    & .app-main-content {
+        margin-top: 90px;
+        margin-left: 10px;
+        @include responsive(phone) {
+            margin-top: 60px;
+            margin-left: 0px;
+        }
+    }
+    & .app-main-subheader {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        // height: 55px;
+        background: #1c0f48;
+        z-index: 1019;
+        padding: 20px;
+        margin-bottom: 4rem !important;
+        @include responsive(phone) {
+            font-size: 0.6rem;
+        }
+    }
+    & .app-footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 1rem;
+        // color: #23282c;
+        background: #140e27 !important;
+        // height: 150px;
+        & a {
+            color: #5867dd;
+        }
+    }
+}
+
+.app-body,
+.app-sidebar {
+    flex: 0 0 250px;
+    order: -1;
+}
+.app-body,
+.app-main {
+    flex: 1 1;
+    min-width: 0;
+}
+
+@media (min-width: 992px) {
+    .app-main,
+    .app-footer {
+        margin-left: 250px;
+    }
+    .app-sidebar {
+        width: 250px !important;
+        margin-left: 0px !important;
+    }
+    .app-body {
+        margin-top: 55px;
+    }
+}
+@media (max-width: 991.98px) {
+    .app-header {
+        position: fixed;
+        z-index: 1020;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+    }
+}

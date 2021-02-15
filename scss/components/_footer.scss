@@ -1,0 +1,13 @@
+.footer {
+    background: #140e27 !important;
+    &-social {
+        & a {
+            background: inherit;
+            &:hover {
+                color: inherit;
+            }
+            margin: 0 5px;
+            border-radius: 16px;
+        }
+    }
+}
