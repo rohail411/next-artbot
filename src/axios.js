@@ -24,5 +24,5 @@ instance.interceptors.request.use(
         return Promise.reject(error);
     }
 );
-instance.defaults.withCredentials = true;
+//instance.defaults.withCredentials = true;
 export default instance;
