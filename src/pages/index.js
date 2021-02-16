@@ -140,7 +140,7 @@ function Index({ featuredVideos$, videos$, audios$ }) {
     };
     return (
         <Layout>
-            <div className="row ml-0">
+            <div className="row ml-0 mr-0">
                 <div className="col-xl-12">
                     <div className="row row-full-height">
                         <div className="col-md-12">
